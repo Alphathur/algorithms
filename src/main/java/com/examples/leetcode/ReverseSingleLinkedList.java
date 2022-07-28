@@ -1,6 +1,6 @@
 package com.examples.leetcode;
 
-import common.ListNode;
+import com.examples.common.ListNode;
 
 import java.util.Stack;
 
