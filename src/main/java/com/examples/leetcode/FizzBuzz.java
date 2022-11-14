@@ -27,12 +27,12 @@ import java.util.function.IntConsumer;
  * 线程D将调用 number() 来实现输出既不能被 3 整除也不能被 5 整除的数字。
  * <p>
  * 来源：力扣（LeetCode）
- * 链接：https://leetcode-cn.com/problems/fizz-buzz-multithreaded
+ * 链接：<a href="https://leetcode-cn.com/problems/fizz-buzz-multithreaded">...</a>
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public class FizzBuzz {
 
-    private int n;
+    private final int n;
     private int count = 1;
 
     public FizzBuzz(int n) {
@@ -43,10 +43,9 @@ public class FizzBuzz {
      * 对比Foo和FooBar，它们每个方法各自打印的数量是n，而此处打印的总数量是n，所以此处不能用for循环。要用一个公共的变量，while循环。
      *
      * @param args
-     * @throws InterruptedException
      */
     public static void main(String[] args) throws InterruptedException {
-        IntConsumer printNumber = value -> System.out.println (value);
+        IntConsumer printNumber = System.out::println;
         final FizzBuzz fizzBuzz = new FizzBuzz (15);
         new Thread (() -> {
             try {
